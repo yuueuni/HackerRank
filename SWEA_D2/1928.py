@@ -39,4 +39,4 @@ for t in range(tcs):
     new_string = ''
     for w in new_decode:
         new_string += chr(bitode(w))
-    print(f'#{t+1} {new_string}')
+    print('#{} {}'.format(t+1, new_string))
