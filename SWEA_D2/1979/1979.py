@@ -1,3 +1,8 @@
+import sys
+
+sys.stdin = open('input.txt')
+
+
 def test(n, k, blocks):
     cnt = 0
     # 가로 i 세로 j

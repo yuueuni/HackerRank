@@ -1,3 +1,8 @@
+import sys
+
+sys.stdin = open('input.txt')
+
+
 def test(n, m, ar, am):
     temp = n - m
     arr = []
@@ -20,8 +25,8 @@ def test(n, m, ar, am):
 
 tc = int(input())
 for t in range(tc):
-    N, M = map(int, input().split(' '))
-    num_n = [int(x) for x in input().split(' ')]
-    num_m = [int(x) for x in input().split(' ')]
+    N, M = map(int, input().split())
+    num_n = list(map(int, input().split()))
+    num_m = list(map(int, input().split()))
     result = test(N, M, num_n, num_m)
     print('#{}'.format(t+1), result)
