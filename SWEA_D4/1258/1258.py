@@ -1,17 +1,34 @@
 import sys
 
-sys.stdin = open('c:\\Users\\multicampus\\Desktop\\vscode\\algorithm\\SWEA_D4\\1258\\input.txt')
+sys.stdin = open('c:\\Users\\jin89\\Desktop\\algorithm\\SWEA_D4\\1258\\input.txt')
 
 T = int(input())
 
 def find(datai, ni):
     idx = []
-    for i in range(ni):
-        start_idx = list(x for x in range(ni) if datai[i][x] != 0)
-
-
-
-
+    i = j = 0
+    while i < ni:
+        base = datai[i][j]
+        if base:
+            ti = tj = 1
+            while datai[i][j+tj]:
+                datai[i][j+tj] = 0
+                tj += 1
+            while datai[i+ti][j]:
+                datai[i+ti][j] = 0
+                ti += 1
+            datai[i][j] = 0
+            idx.append([ti, tj])
+            j += tj
+            if j> ni:
+                i += ti+1
+                j = 0
+        else:
+            j += 1
+            if j > ni:
+                j = 0
+                i += 1
+    return idx
 
 
 for tc in range(1, T+1):
@@ -20,5 +37,13 @@ for tc in range(1, T+1):
     for _ in range(n):
         data.append(list(map(int, input().split()))+[0])
     result = find(data, n)
-    #print(f'#{tc}', len(result),  *result.values())
-    print(f'#{tc} {result}')
+    s_result = []
+    for r in result:
+        temp = r[0]*r[1]
+        s_result.append([temp, r[0], r[1]])
+    s_result.sort()
+    print(f'#{tc}', len(result), end =' ')
+    for sr in s_result:
+        stemp = sr[1:]
+        print(*stemp, end=' ')
+    print()
