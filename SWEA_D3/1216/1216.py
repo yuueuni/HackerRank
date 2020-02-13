@@ -1,6 +1,7 @@
 import sys
 
-sys.stdin = open('c:\\Users\\jin89\\Desktop\\algorithm\\SWEA_D3\\1216\\input.txt')
+sys.stdin = open('input.txt')
+
 
 def find(datai):
     result = 0

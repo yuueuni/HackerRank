@@ -1,3 +1,8 @@
+import sys
+
+sys.stdin = open('input.txt')
+
+
 def palindrome(n, m):
     cnt = 0
     for i in range(len(m)):
