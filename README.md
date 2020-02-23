@@ -1,4 +1,6 @@
-## ALGORITHM
+# ALGORITHM PROBLEM
+
+## Python
 
 * HackerRank
     * [Strings](https://github.com/yuueuni/algorithm/tree/master/Strings)
