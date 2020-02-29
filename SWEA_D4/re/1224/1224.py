@@ -1,31 +1,33 @@
 import sys
 
-sys.stdin = open('input.txt')
+sys.stdin = open('c:\\yooncode\\algorithm\\SWEA_D4\\re\\1224\\input.txt')
 
-def test(data):
+
+def postfix(data):
+    stack = []
     result = []
-    temp = []
-    while data:
-        d = data.pop(0)
-        if d == '(':
-            d = data.pop(0)
-            while True:
-                if d.isdigit():
-                   result.append(d)
-                elif d == ')':
-                    break
-                else:
-                    temp.append(d)
+    check = False
+    i = 0
+    while i != len(data):
+        d = data[i]
         if d.isdigit():
             result.append(d)
+        elif d =='(':
+            while d != ')':
+                if d.isdigit():
+                    result.append(d)
+                elif d == '*' or d == '+':
+                    stack.append(d)
+                i += 1
+                d = data[i]
         else:
-            temp.append(d)
+            stack.append(d)
+        i += 1
+    return result
 
-    return 1
 
-
-for tc in range(1, 11):
+for tc in range(1, 2):
     n = int(input())
     data = input()
-    result = test(data)
+    result = postfix(data)
     print(f'#{tc} {eval(data)} {result}')
