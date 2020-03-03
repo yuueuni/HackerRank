@@ -4,24 +4,37 @@ sys.stdin = open('c:\\yooncode\\algorithm\\SWEA_D4\\re\\1224\\input.txt')
 
 
 def postfix(data):
-    stack = []
     result = []
     check = False
-    i = 0
+    bracket = False
+    i = temp = tem2 = 0
     while i != len(data):
         d = data[i]
         if d.isdigit():
-            result.append(d)
+            if check:
+                result.append(d)
+                result.append(temp)
+                check = False
+            else:
+                result.append(d)
         elif d =='(':
             while d != ')':
                 if d.isdigit():
-                    result.append(d)
+                    if bracket:
+                        result.append(d)
+                        result.append(tem2)
+                        bracket = False
+                    else:
+                        result.append(d)
                 elif d == '*' or d == '+':
-                    stack.append(d)
+                    tem2 = d
+                    bracket = True
                 i += 1
                 d = data[i]
+            result.append(temp)
         else:
-            stack.append(d)
+            temp = d
+            check = True
         i += 1
     return result
 
