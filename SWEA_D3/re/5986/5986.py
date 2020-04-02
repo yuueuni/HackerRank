@@ -16,9 +16,11 @@ def primeNumber(number):
             printN.append(i)
     return printN
 
+
 def check(number):
     pn = primeNumber(number)
     temp = []
+    return 1
     
 
 
