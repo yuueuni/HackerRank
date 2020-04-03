@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin = open('c:\\tensor\\algorithm\\SWEA_D2\\4875\\input.txt')
+sys.stdin = open('input.txt')
 
 
 T = int(input())
