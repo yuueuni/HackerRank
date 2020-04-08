@@ -17,8 +17,6 @@ for i in range(2, 1000):
 
 def check(number):
     global primeNumber, cnt
-    
-
     return 1
 
 
