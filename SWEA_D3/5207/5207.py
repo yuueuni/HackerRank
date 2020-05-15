@@ -29,28 +29,30 @@ for tc in range(1, t+1):
 
 
 # ---------------------------------------------------------------------
-t = int(input())
 
-def find(start, end, dire, number, data):
-    while True:
-        middle = (start+end)//2
-        if number == data[middle]:
-            return 1
-        elif number > data[middle] and dire != 1:
-            start = middle + 1
-            dire = 1
-        elif number < data[middle] and dire != -1:
-            end = middle - 1
-            dire = -1
-        else:
-            return 0
 
-for tc in range(1, t+1):
-    n, m = map(int, input().split())
-    a = list(map(int, input().split()))
-    b = list(map(int, input().split()))
-    result = 0
-    a.sort()
-    for i in b:
-        result += find(0, n-1, 0, i, a)
-    print(f'#{tc} {result}')
+# t = int(input())
+
+# def find(start, end, dire, number, data):
+#     while True:
+#         middle = (start+end)//2
+#         if number == data[middle]:
+#             return 1
+#         elif number > data[middle] and dire != 1:
+#             start = middle + 1
+#             dire = 1
+#         elif number < data[middle] and dire != -1:
+#             end = middle - 1
+#             dire = -1
+#         else:
+#             return 0
+
+# for tc in range(1, t+1):
+#     n, m = map(int, input().split())
+#     a = list(map(int, input().split()))
+#     b = list(map(int, input().split()))
+#     result = 0
+#     a.sort()
+#     for i in b:
+#         result += find(0, n-1, 0, i, a)
+#     print(f'#{tc} {result}')
