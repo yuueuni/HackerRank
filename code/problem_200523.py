@@ -36,5 +36,23 @@ def monster(x, y, r, d, target) :
 
 
 def pang(board):
-    answer = 0
+    for i in range(n):
+        before = data[i][0]
+        change_index = []
+        for j in range(n):
+            current = data[i][j]
+            if before == current:
+                change_index.append((i, j))
+            else:
+                if len(change_index) >= 3:
+                    for y, x in change_index:
+                        result[y][x] = 0
+                else:
+                    change_index = []
     return answer
+
+def solution(board):
+    for i in range(n):
+        for j in range(n):
+            new_board = hammer(board)
+            score = 
