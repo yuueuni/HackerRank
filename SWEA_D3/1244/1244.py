@@ -54,3 +54,49 @@ for tc in range(1, t+1):
        	temp[-2], temp[-1] = temp[-1], temp[-2]
         maxV = ''.join(temp)
     print(f'#{tc} {maxV}')
+
+
+# ------------------------------------------------------------
+t = int(input())
+maxsize = 720 # 6!
+
+def swap(prize, i, j):
+    numArr = [0] * numOfcard
+    for k in range(numOfcard-1, -1, -1):
+        numArr[k] = prize % 10
+        prize //= 10
+    numArr[i], numArr[j] = numArr[j], numArr[i]
+    prize = 0
+    for k in range(numOfcard):
+        prize = prize * 10 + numArr[k]
+    return prize
+
+def findMax(prize, num, k):
+    global ans
+    # 메모이제이션 및 가지치기
+    for i in range(maxsize):
+        if memo[k][i] == 0:
+            memo[k][i] = prize
+            break
+        elif memo[k][i] == prize:
+            return
+
+    if k == num:
+        if prize > ans: ans = prize
+    else:
+        for i in range(numOfcard-1):
+            for j in range(i+1, numOfcard):
+                findMax(swap(prize, i, j), num, k+1)
+
+for tc in range(1, t+1):
+    prize, num = map(int, input().split())
+    memo = [[0] * maxsize for _ in range(num+1)]
+    numOfcard = 0
+    ans = 0
+    t = prize
+    while t:
+        t //= 10
+        numOfcard += 1
+    
+    findMax(prize, num, 0)
+    print(f'#{tc} {ans}')
