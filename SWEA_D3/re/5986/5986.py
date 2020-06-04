@@ -14,10 +14,8 @@ for i in range(2, 1000):
     if check:
         primeNumber.append(i)
 
-
-def check(number):
-    global primeNumber, cnt
-    return 1
+# def check(number):
+#     return 1
 
 
 for tc in range(1, T+1):
