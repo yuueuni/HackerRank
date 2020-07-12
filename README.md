@@ -7,6 +7,7 @@
     * [Implementation](https://github.com/yuueuni/algorithm/tree/master/Implementation)
 
 * SW Expert Academy
+* python level 3
     * [D1](https://github.com/yuueuni/algorithm/tree/master/SWEA_D1)
     * [D2](https://github.com/yuueuni/algorithm/tree/master/SWEA_D2)
     * [D3](https://github.com/yuueuni/algorithm/tree/master/SWEA_D3)
