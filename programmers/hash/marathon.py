@@ -21,3 +21,14 @@ def solution2(participant, completion):
     return list(answer.keys())[0]
 
 # -------------------------------------------------------------------
+
+# # My Solution
+# Success
+
+def solution3(participant, completion):
+    participant.sort()
+    completion.sort()
+    for i in range(len(completion)):
+        if participant[i] != completion[i]:
+            return participant[i]
+    return participant[-1]
