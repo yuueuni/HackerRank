@@ -2,6 +2,10 @@
 
 ## Python
 
+* algorithm code
+    - dp
+    - dfs, bfs
+
 * HackerRank
     * [Strings](https://github.com/yuueuni/algorithm/tree/master/Strings)
     * [Implementation](https://github.com/yuueuni/algorithm/tree/master/Implementation)
