@@ -21,4 +21,6 @@
 * [Baekjoon](https://github.com/yuueuni/algorithm/tree/master/baekjoon)
 
 
-* [Programmers](https://github.com/yuueuni/algorithm/tree/master/programmers)
+* Programmers
+    * [hash](https://github.com/yuueuni/algorithm/tree/master/programmers/hash)
+    * [stack & queue](https://github.com/yuueuni/algorithm/tree/master/programmers/stack_queue)
