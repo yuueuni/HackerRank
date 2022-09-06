@@ -17,7 +17,7 @@ def palidrome1(words: str) -> bool:
 
 # Use Deque
 def palidrome2(words: str) -> bool:
-    origin = Deque = collections.deque(w.lower() for w in words if w.isalnum())
+    origin : Deque = collections.deque(w.lower() for w in words if w.isalnum())
     reverse_origin = origin
     reverse_origin.reverse()
     return True
