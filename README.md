@@ -10,6 +10,7 @@
     * [WarmUp](https://github.com/yuueuni/algorithm/tree/master/hackerrank/WarmUp)
     * [Strings](https://github.com/yuueuni/algorithm/tree/master/hackerrank/Strings)
     * [Implementation](https://github.com/yuueuni/algorithm/tree/master/hackerrank/Implementation)
+    * [Sorting](https://github.com/yuueuni/algorithm/tree/master/hackerrank/Sorting)
 
 * SW Expert Academy
     * [D1](https://github.com/yuueuni/algorithm/tree/master/swea/SWEA_D1)
