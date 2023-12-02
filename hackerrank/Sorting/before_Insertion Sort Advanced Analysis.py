@@ -1,3 +1,4 @@
+
 #!/bin/python3
 
 import math
@@ -14,6 +15,19 @@ from array import array
 # The function is expected to return an INTEGER.
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
+
+# def insertionSort(arr):
+#     idx = 1
+#     shift = 0
+#     while idx != len(arr):
+#         if arr[idx - 1] > arr[idx]:
+#             for i in range(idx):
+#                 if arr[i] > arr[idx]:
+#                     arr.insert(i, arr.pop(idx))
+#                     shift += idx - i
+#                     break
+#         idx += 1
+#     return shift
 
 def insertionSort(arr):
     # Write your code here
