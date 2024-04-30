@@ -21,7 +21,6 @@ def solution(n, computers):
     return max(answer, 1)
 
 
-
 if __name__ == "__main__":
     for inp in inputs:
         n, computers, result = inp[0], inp[1], inp[2]
